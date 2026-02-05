@@ -1,5 +1,7 @@
 # Motion Recipes
 
+**[Live Demo](https://motion-recipes.vercel.app)** · **[GitHub](https://github.com/hexiao0225/motion-recipes)**
+
 A gallery of **10 subtle, accessible UI microinteractions** built with CSS-first animations. Zero animation libraries — just Next.js, TypeScript, and Tailwind CSS.
 
 ## Goal
