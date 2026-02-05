@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #ffffff;
+  --color-text: #111111;
+  --color-text-muted: #666666;
+  --color-border: #e5e5e5;
+  --color-accent: #2563eb;
+  --color-accent-hover: #1d4ed8;
+  --color-success: #16a34a;
+  --transition-fast: 150ms;
+  --transition-normal: 200ms;
+  --transition-slow: 300ms;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-white text-gray-900;
+  }
+
+  /* Global focus-visible styles */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+  }
+
+  /* Remove default focus ring for mouse users */
+  *:focus:not(:focus-visible) {
+    @apply outline-none ring-0;
+  }
+}
+
+@layer components {
+  /* Recipe card code block */
+  .code-block {
+    @apply bg-gray-50 rounded-lg p-4 text-sm font-mono overflow-x-auto;
+    tab-size: 2;
+  }
+
+  .code-block code {
+    @apply text-gray-800;
+  }
+}
+
+@layer utilities {
+  /* Reduced motion utilities */
+  .motion-safe\:animate-shimmer {
+    animation: shimmer 1.5s infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .motion-safe\:animate-shimmer {
+      animation: none;
+    }
+  }
+
+  /* Grid pattern for accordion content height animation */
+  .grid-rows-\[0fr\] {
+    grid-template-rows: 0fr;
+  }
+
+  .grid-rows-\[1fr\] {
+    grid-template-rows: 1fr;
+  }
+}
