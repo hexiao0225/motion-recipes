@@ -19,7 +19,7 @@ export default function Home() {
         </p>
         <p className="mt-1">
           <a
-            href="https://github.com/yourusername/motion-recipes"
+            href="https://github.com/hexiao0225/motion-recipes"
             className="text-blue-600 hover:underline"
           >
             View source on GitHub
